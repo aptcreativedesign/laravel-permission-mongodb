@@ -15,6 +15,7 @@ use Maklad\Permission\PermissionRegistrar;
 
 /**
  * Trait HasPermissions
+ *
  * @package Maklad\Permission\Traits
  */
 trait HasPermissions
@@ -42,6 +43,7 @@ trait HasPermissions
 
     /**
      * A role may be given various permissions.
+     *
      * @return BelongsToMany
      */
     public function permissions(): BelongsToMany
@@ -62,15 +64,29 @@ trait HasPermissions
         $permissions = collect($permissions)
             ->flatten()
             ->map(function ($permission) {
-                return $this->getStoredPermission($permission);
+                $permission = $this->getStoredPermission($permission);
+                // check if the User or Role doesn't have the permission already
+                if (!$this->hasPermissionTo($permission)) {
+                    return $permission;
+                }
             })
             ->each(function ($permission) {
-                $this->ensureModelSharesGuard($permission);
+                // check to see if there is any permission to check
+                if ($permission !== null) {
+                    $this->ensureModelSharesGuard($permission);
+                }
             })
             ->all();
 
-        $this->permissions()->saveMany($permissions);
+        // remove any null values from $permissions array
+        $permissions = array_filter($permissions);
 
+        // if there are any $permissions to save
+        if (count($permissions) > 0) {
+            $this->permissions()->saveMany($permissions);
+        }
+
+        // rehydrate cached permissions
         $this->forgetCachedPermissions();
 
         return $this;
@@ -138,10 +154,10 @@ trait HasPermissions
      */
     protected function ensureModelSharesGuard(Model $roleOrPermission)
     {
-        if (! $this->getGuardNames()->contains($roleOrPermission->guard_name)) {
+        if (!$this->getGuardNames()->contains($roleOrPermission->guard_name)) {
             $expected = $this->getGuardNames();
-            $given    = $roleOrPermission->guard_name;
-            $helpers  = new Helpers();
+            $given = $roleOrPermission->guard_name;
+            $helpers = new Helpers();
 
             throw new GuardDoesNotMatch($helpers->getGuardDoesNotMatchMessage($expected, $given));
         }
@@ -186,7 +202,7 @@ trait HasPermissions
             $permissions = collect($permissions);
         }
 
-        if (! $permissions instanceof Collection) {
+        if (!$permissions instanceof Collection) {
             $permissions = collect([$permissions]);
         }
 
@@ -233,7 +249,7 @@ trait HasPermissions
      * Determine if the model may perform the given permission.
      *
      * @param string|Permission $permission
-     * @param string|null $guardName
+     * @param string|null       $guardName
      *
      * @return bool
      * @throws \ReflectionException
@@ -334,7 +350,7 @@ trait HasPermissions
     /**
      * Scope the model query to certain permissions only.
      *
-     * @param Builder $query
+     * @param Builder                                                                  $query
      * @param string|array|\Maklad\Permission\Contracts\PermissionInterface|Collection $permissions
      *
      * @return Builder
