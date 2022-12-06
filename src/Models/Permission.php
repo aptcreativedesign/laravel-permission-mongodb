@@ -16,6 +16,7 @@ use Maklad\Permission\Traits\RefreshesPermissionCache;
 
 /**
  * Class Permission
+ *
  * @package Maklad\Permission\Models
  */
 class Permission extends Model implements PermissionInterface
@@ -37,6 +38,8 @@ class Permission extends Model implements PermissionInterface
     {
         $attributes['guard_name'] = $attributes['guard_name'] ?? (new Guard())->getDefaultName(static::class);
 
+        $attributes['parent_permission_name'] = $attributes['parent_permission_name'] ?? null;
+
         parent::__construct($attributes);
 
         $this->helpers = new Helpers();
@@ -57,6 +60,7 @@ class Permission extends Model implements PermissionInterface
     {
         $helpers = new Helpers();
         $attributes['guard_name'] = $attributes['guard_name'] ?? (new Guard())->getDefaultName(static::class);
+        $attributes['parent_permission_name'] = $attributes['parent_permission_name'] ?? null;
 
         if (static::getPermissions()->where('name', $attributes['name'])->where(
             'guard_name',
@@ -80,7 +84,7 @@ class Permission extends Model implements PermissionInterface
      * @throws \Maklad\Permission\Exceptions\PermissionAlreadyExists
      * @throws \ReflectionException
      */
-    public static function findOrCreate(string $name, string $guardName = null): PermissionInterface
+    public static function findOrCreate(string $name, string $guardName = null, string $paraenPermissionName = null): PermissionInterface
     {
         $guardName = $guardName ?? (new Guard())->getDefaultName(static::class);
 
@@ -89,7 +93,7 @@ class Permission extends Model implements PermissionInterface
         })->first();
 
         if (!$permission) {
-            $permission = static::create(['name' => $name, 'guard_name' => $guardName]);
+            $permission = static::create(['name' => $name, 'guard_name' => $guardName, 'parent_permission_name' => $paraenPermissionName]);
         }
 
         return $permission;
@@ -97,6 +101,7 @@ class Permission extends Model implements PermissionInterface
 
     /**
      * A permission can be applied to roles.
+     *
      * @return BelongsToMany
      */
     public function roles(): BelongsToMany
@@ -106,6 +111,7 @@ class Permission extends Model implements PermissionInterface
 
     /**
      * A permission belongs to some users of the model associated with its guard.
+     *
      * @return BelongsToMany
      */
     public function users(): BelongsToMany
@@ -141,6 +147,7 @@ class Permission extends Model implements PermissionInterface
 
     /**
      * Get the current cached permissions.
+     *
      * @return Collection
      */
     protected static function getPermissions(): Collection
