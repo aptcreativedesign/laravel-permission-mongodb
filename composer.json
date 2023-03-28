@@ -38,7 +38,7 @@
         "illuminate/auth": "^6.0|^7.0|^8.0|^9.0|^10.0",
         "illuminate/container": "^6.0|^7.0|^8.0|^9.0|^10.0",
         "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0",
-        "jenssegers/mongodb": "^3.0|dev-master"
+        "jenssegers/mongodb": "dev-master"
     },
     "require-dev": {
         "monolog/monolog": "^1.23|^2.0",
