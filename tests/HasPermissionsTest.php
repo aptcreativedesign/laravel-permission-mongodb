@@ -1,11 +1,11 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
-use Maklad\Permission\Exceptions\GuardDoesNotMatch;
-use Maklad\Permission\Exceptions\PermissionDoesNotExist;
-use Maklad\Permission\Models\Permission;
-use Maklad\Permission\Models\Role;
+use AptCD\Permission\Exceptions\GuardDoesNotMatch;
+use AptCD\Permission\Exceptions\PermissionDoesNotExist;
+use AptCD\Permission\Models\Permission;
+use AptCD\Permission\Models\Role;
 use Monolog\Logger;
 
 class HasPermissionsTest extends TestCase

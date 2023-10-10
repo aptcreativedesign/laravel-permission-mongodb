@@ -1,12 +1,12 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
-use Maklad\Permission\Models\Role;
-use Maklad\Permission\Models\Permission;
-use Maklad\Permission\Exceptions\GuardDoesNotMatch;
-use Maklad\Permission\Exceptions\RoleAlreadyExists;
-use Maklad\Permission\Exceptions\PermissionDoesNotExist;
+use AptCD\Permission\Models\Role;
+use AptCD\Permission\Models\Permission;
+use AptCD\Permission\Exceptions\GuardDoesNotMatch;
+use AptCD\Permission\Exceptions\RoleAlreadyExists;
+use AptCD\Permission\Exceptions\PermissionDoesNotExist;
 use Monolog\Logger;
 
 class RoleTest extends TestCase

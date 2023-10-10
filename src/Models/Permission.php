@@ -1,23 +1,23 @@
 <?php
 
-namespace Maklad\Permission\Models;
+namespace AptCD\Permission\Models;
 
 use Illuminate\Support\Collection;
-use Jenssegers\Mongodb\Eloquent\Model;
-use Jenssegers\Mongodb\Relations\BelongsToMany;
-use Maklad\Permission\Contracts\PermissionInterface;
-use Maklad\Permission\Exceptions\PermissionAlreadyExists;
-use Maklad\Permission\Exceptions\PermissionDoesNotExist;
-use Maklad\Permission\Guard;
-use Maklad\Permission\Helpers;
-use Maklad\Permission\PermissionRegistrar;
-use Maklad\Permission\Traits\HasRoles;
-use Maklad\Permission\Traits\RefreshesPermissionCache;
+use MongoDB\Laravel\Eloquent\Model;
+use MongoDB\Laravel\Relations\BelongsToMany;
+use AptCD\Permission\Contracts\PermissionInterface;
+use AptCD\Permission\Exceptions\PermissionAlreadyExists;
+use AptCD\Permission\Exceptions\PermissionDoesNotExist;
+use AptCD\Permission\Guard;
+use AptCD\Permission\Helpers;
+use AptCD\Permission\PermissionRegistrar;
+use AptCD\Permission\Traits\HasRoles;
+use AptCD\Permission\Traits\RefreshesPermissionCache;
 
 /**
  * Class Permission
  *
- * @package Maklad\Permission\Models
+ * @package AptCD\Permission\Models
  */
 class Permission extends Model implements PermissionInterface
 {
@@ -53,7 +53,7 @@ class Permission extends Model implements PermissionInterface
      * @param array $attributes
      *
      * @return $this|\Illuminate\Database\Eloquent\Model
-     * @throws \Maklad\Permission\Exceptions\PermissionAlreadyExists
+     * @throws \AptCD\Permission\Exceptions\PermissionAlreadyExists
      * @throws \ReflectionException
      */
     public static function create(array $attributes = [])
@@ -81,7 +81,7 @@ class Permission extends Model implements PermissionInterface
      * @param string $guardName
      *
      * @return PermissionInterface
-     * @throws \Maklad\Permission\Exceptions\PermissionAlreadyExists
+     * @throws \AptCD\Permission\Exceptions\PermissionAlreadyExists
      * @throws \ReflectionException
      */
     public static function findOrCreate(string $name, string $guardName = null, string $paraenPermissionName = null): PermissionInterface

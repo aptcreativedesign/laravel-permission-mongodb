@@ -1,13 +1,13 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
 use Jenssegers\Mongodb\MongodbServiceProvider;
-use Maklad\Permission\Helpers;
-use Maklad\Permission\Models\Permission;
-use Maklad\Permission\Models\Role;
-use Maklad\Permission\PermissionRegistrar;
-use Maklad\Permission\PermissionServiceProvider;
+use AptCD\Permission\Helpers;
+use AptCD\Permission\Models\Permission;
+use AptCD\Permission\Models\Role;
+use AptCD\Permission\PermissionRegistrar;
+use AptCD\Permission\PermissionServiceProvider;
 use Monolog\Handler\TestHandler;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -26,22 +26,22 @@ abstract class TestCase extends Orchestra
         $this->app[Permission::class]::truncate();
     }
 
-    /** @var \Maklad\Permission\Test\User */
+    /** @var \AptCD\Permission\Test\User */
     protected $testUser;
 
-    /** @var \Maklad\Permission\Test\Admin */
+    /** @var \AptCD\Permission\Test\Admin */
     protected $testAdmin;
 
-    /** @var \Maklad\Permission\Models\Role */
+    /** @var \AptCD\Permission\Models\Role */
     protected $testUserRole;
 
-    /** @var \Maklad\Permission\Models\Role */
+    /** @var \AptCD\Permission\Models\Role */
     protected $testAdminRole;
 
-    /** @var \Maklad\Permission\Models\Permission */
+    /** @var \AptCD\Permission\Models\Permission */
     protected $testUserPermission;
 
-    /** @var \Maklad\Permission\Models\Permission */
+    /** @var \AptCD\Permission\Models\Permission */
     protected $testAdminPermission;
 
     public function setUp(): void

@@ -1,11 +1,11 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 /**
  * Class RoleAlreadyExists
- * @package Maklad\Permission\Exceptions
+ * @package AptCD\Permission\Exceptions
  */
-class RoleAlreadyExists extends MakladException
+class RoleAlreadyExists extends AptCDException
 {
 }

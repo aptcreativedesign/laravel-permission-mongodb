@@ -1,12 +1,12 @@
 <?php
 
-namespace Maklad\Permission;
+namespace AptCD\Permission;
 
 use Illuminate\Support\Collection;
 
 /**
  * Class Guard
- * @package Maklad\Permission
+ * @package AptCD\Permission
  */
 class Guard
 {

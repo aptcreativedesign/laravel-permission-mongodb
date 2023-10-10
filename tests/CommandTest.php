@@ -1,10 +1,10 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
 use Artisan;
-use Maklad\Permission\Models\Permission;
-use Maklad\Permission\Models\Role;
+use AptCD\Permission\Models\Permission;
+use AptCD\Permission\Models\Role;
 
 class CommandTest extends TestCase
 {

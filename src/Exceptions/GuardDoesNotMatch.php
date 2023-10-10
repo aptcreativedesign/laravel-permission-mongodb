@@ -1,11 +1,11 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 /**
  * Class GuardDoesNotMatch
- * @package Maklad\Permission\Exceptions
+ * @package AptCD\Permission\Exceptions
  */
-class GuardDoesNotMatch extends MakladException
+class GuardDoesNotMatch extends AptCDException
 {
 }

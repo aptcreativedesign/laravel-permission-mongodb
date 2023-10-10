@@ -1,22 +1,22 @@
 <?php
 
-namespace Maklad\Permission\Models;
+namespace AptCD\Permission\Models;
 
-use Jenssegers\Mongodb\Eloquent\Model;
-use Jenssegers\Mongodb\Relations\BelongsToMany;
-use Maklad\Permission\Contracts\RoleInterface;
-use Maklad\Permission\Exceptions\GuardDoesNotMatch;
-use Maklad\Permission\Exceptions\RoleAlreadyExists;
-use Maklad\Permission\Exceptions\RoleDoesNotExist;
-use Maklad\Permission\Guard;
-use Maklad\Permission\Helpers;
-use Maklad\Permission\Traits\HasPermissions;
-use Maklad\Permission\Traits\RefreshesPermissionCache;
+use MongoDB\Laravel\Eloquent\Model;
+use MongoDB\Laravel\Relations\BelongsToMany;
+use AptCD\Permission\Contracts\RoleInterface;
+use AptCD\Permission\Exceptions\GuardDoesNotMatch;
+use AptCD\Permission\Exceptions\RoleAlreadyExists;
+use AptCD\Permission\Exceptions\RoleDoesNotExist;
+use AptCD\Permission\Guard;
+use AptCD\Permission\Helpers;
+use AptCD\Permission\Traits\HasPermissions;
+use AptCD\Permission\Traits\RefreshesPermissionCache;
 use ReflectionException;
 
 /**
  * Class Role
- * @package Maklad\Permission\Models
+ * @package AptCD\Permission\Models
  */
 class Role extends Model implements RoleInterface
 {
@@ -74,7 +74,7 @@ class Role extends Model implements RoleInterface
      * @param string|null $guardName
      *
      * @return RoleInterface
-     * @throws \Maklad\Permission\Exceptions\RoleAlreadyExists
+     * @throws \AptCD\Permission\Exceptions\RoleAlreadyExists
      * @throws \ReflectionException
      */
     public static function findOrCreate(string $name, $guardName = null): RoleInterface

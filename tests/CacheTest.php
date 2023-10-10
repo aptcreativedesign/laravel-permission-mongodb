@@ -1,11 +1,11 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
 use Illuminate\Support\Facades\DB;
-use Maklad\Permission\Models\Role;
-use Maklad\Permission\PermissionRegistrar;
-use Maklad\Permission\Models\Permission;
+use AptCD\Permission\Models\Role;
+use AptCD\Permission\PermissionRegistrar;
+use AptCD\Permission\Models\Permission;
 
 class CacheTest extends TestCase
 {

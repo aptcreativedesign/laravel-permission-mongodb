@@ -1,13 +1,13 @@
 <?php
 
-namespace Maklad\Permission\Contracts;
+namespace AptCD\Permission\Contracts;
 
-use Jenssegers\Mongodb\Relations\BelongsToMany;
-use Maklad\Permission\Exceptions\RoleDoesNotExist;
+use MongoDB\Laravel\Relations\BelongsToMany;
+use AptCD\Permission\Exceptions\RoleDoesNotExist;
 
 /**
  * Interface RoleInterface
- * @package Maklad\Permission\Contracts
+ * @package AptCD\Permission\Contracts
  */
 interface RoleInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 /**
  * Class PermissionDoesNotExist
- * @package Maklad\Permission\Exceptions
+ * @package AptCD\Permission\Exceptions
  */
-class PermissionDoesNotExist extends MakladException
+class PermissionDoesNotExist extends AptCDException
 {
 }

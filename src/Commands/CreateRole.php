@@ -1,13 +1,13 @@
 <?php
 
-namespace Maklad\Permission\Commands;
+namespace AptCD\Permission\Commands;
 
 use Illuminate\Console\Command;
-use Maklad\Permission\Contracts\RoleInterface as Role;
+use AptCD\Permission\Contracts\RoleInterface as Role;
 
 /**
  * Class CreateRole
- * @package Maklad\Permission\Commands
+ * @package AptCD\Permission\Commands
  */
 class CreateRole extends Command
 {
