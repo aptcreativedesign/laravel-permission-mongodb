@@ -1,15 +1,15 @@
 <?php
 
-namespace Maklad\Permission\Middlewares;
+namespace AptCD\Permission\Middlewares;
 
 use Closure;
-use Maklad\Permission\Exceptions\UnauthorizedRole;
-use Maklad\Permission\Exceptions\UserNotLoggedIn;
-use Maklad\Permission\Helpers;
+use AptCD\Permission\Exceptions\UnauthorizedRole;
+use AptCD\Permission\Exceptions\UserNotLoggedIn;
+use AptCD\Permission\Helpers;
 
 /**
  * Class RoleMiddleware
- * @package Maklad\Permission\Middlewares
+ * @package AptCD\Permission\Middlewares
  */
 class RoleMiddleware
 {
@@ -19,7 +19,7 @@ class RoleMiddleware
      * @param $role
      *
      * @return mixed
-     * @throws \Maklad\Permission\Exceptions\UnauthorizedException
+     * @throws \AptCD\Permission\Exceptions\UnauthorizedException
      */
     public function handle($request, Closure $next, $role)
     {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Maklad\Permission\Commands;
+namespace AptCD\Permission\Commands;
 
 use Illuminate\Console\Command;
-use Maklad\Permission\Contracts\PermissionInterface as Permission;
+use AptCD\Permission\Contracts\PermissionInterface as Permission;
 
 /**
  * Class CreatePermission
- * @package Maklad\Permission\Commands
+ * @package AptCD\Permission\Commands
  */
 class CreatePermission extends Command
 {

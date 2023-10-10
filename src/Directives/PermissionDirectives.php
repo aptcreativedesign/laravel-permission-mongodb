@@ -1,12 +1,12 @@
 <?php
 
-namespace Maklad\Permission\Directives;
+namespace AptCD\Permission\Directives;
 
 use Illuminate\View\Compilers\BladeCompiler;
 
 /**
  * Class PermissionDirectives
- * @package Maklad\Permission\Directives
+ * @package AptCD\Permission\Directives
  */
 class PermissionDirectives
 {

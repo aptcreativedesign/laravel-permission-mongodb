@@ -1,12 +1,12 @@
 <?php
 
-namespace Maklad\Permission;
+namespace AptCD\Permission;
 
 use Illuminate\Support\Collection;
 
 /**
  * Class Helpers
- * @package Maklad\Permission
+ * @package AptCD\Permission
  */
 class Helpers
 {
@@ -40,9 +40,12 @@ class Helpers
      *
      * @return string
      */
-    public function getPermissionAlreadyExistsMessage(string $name, string $guardName): string
+    public function getPermissionAlreadyExistsMessage(string $name, string $type, string $guardName): string
     {
-        return "A permission `{$name}` already exists for guard `{$guardName}`.";
+        if ($type === '' || $type === null) {
+            $type = 'no';
+        }
+        return "A permission `{$name}` already exists with `{$type}` type for guard `{$guardName}`.";
     }
 
     /**
@@ -51,9 +54,12 @@ class Helpers
      *
      * @return string
      */
-    public function getPermissionDoesNotExistMessage(string $name, string $guardName): string
+    public function getPermissionDoesNotExistMessage(string $name, string $type, string $guardName): string
     {
-        return "There is no permission named `{$name}` for guard `{$guardName}`.";
+        if ($type === '' || $type === null) {
+            $type = 'no';
+        }
+        return "There is no permission named `{$name}` with `{$type}` type for guard `{$guardName}`.";
     }
 
     /**

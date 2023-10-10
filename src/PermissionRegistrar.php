@@ -1,16 +1,16 @@
 <?php
 
-namespace Maklad\Permission;
+namespace AptCD\Permission;
 
 use Illuminate\Contracts\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Support\Collection;
-use Maklad\Permission\Contracts\PermissionInterface as Permission;
+use AptCD\Permission\Contracts\PermissionInterface as Permission;
 
 /**
  * Class PermissionRegistrar
- * @package Maklad\Permission
+ * @package AptCD\Permission
  */
 class PermissionRegistrar
 {
@@ -21,7 +21,7 @@ class PermissionRegistrar
     protected $cache;
 
     /** @var string */
-    protected $cacheKey = 'maklad.permission.cache';
+    protected $cacheKey = 'aptcd.permission.cache';
 
     /** @var string */
     protected $permissionClass;

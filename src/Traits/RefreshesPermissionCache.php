@@ -1,12 +1,12 @@
 <?php
 
-namespace Maklad\Permission\Traits;
+namespace AptCD\Permission\Traits;
 
-use Maklad\Permission\PermissionRegistrar;
+use AptCD\Permission\PermissionRegistrar;
 
 /**
  * Trait RefreshesPermissionCache
- * @package Maklad\Permission\Traits
+ * @package AptCD\Permission\Traits
  */
 trait RefreshesPermissionCache
 {

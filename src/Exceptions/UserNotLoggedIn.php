@@ -1,10 +1,10 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 /**
  * Class UserNotLoggedIn
- * @package Maklad\Permission\Exceptions
+ * @package AptCD\Permission\Exceptions
  */
 class UserNotLoggedIn extends UnauthorizedException
 {

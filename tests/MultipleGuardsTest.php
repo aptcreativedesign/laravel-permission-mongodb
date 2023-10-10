@@ -1,8 +1,8 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
-use Maklad\Permission\Models\Permission;
+use AptCD\Permission\Models\Permission;
 
 class MultipleGuardsTest extends TestCase
 {

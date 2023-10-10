@@ -1,9 +1,9 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
 use Artisan;
-use Maklad\Permission\Models\Role;
+use AptCD\Permission\Models\Role;
 
 class BladeTest extends TestCase
 {

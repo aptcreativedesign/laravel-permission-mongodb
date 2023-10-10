@@ -1,22 +1,22 @@
 <?php
 
-namespace Maklad\Permission\Traits;
+namespace AptCD\Permission\Traits;
 
 use Illuminate\Support\Collection;
-use Jenssegers\Mongodb\Eloquent\Builder;
-use Jenssegers\Mongodb\Eloquent\Model;
-use Jenssegers\Mongodb\Relations\BelongsToMany;
-use Maklad\Permission\Contracts\PermissionInterface as Permission;
-use Maklad\Permission\Exceptions\GuardDoesNotMatch;
-use Maklad\Permission\Guard;
-use Maklad\Permission\Helpers;
-use Maklad\Permission\Models\Role;
-use Maklad\Permission\PermissionRegistrar;
+use MongoDB\Laravel\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Model;
+use MongoDB\Laravel\Relations\BelongsToMany;
+use AptCD\Permission\Contracts\PermissionInterface as Permission;
+use AptCD\Permission\Exceptions\GuardDoesNotMatch;
+use AptCD\Permission\Guard;
+use AptCD\Permission\Helpers;
+use AptCD\Permission\Models\Role;
+use AptCD\Permission\PermissionRegistrar;
 
 /**
  * Trait HasPermissions
  *
- * @package Maklad\Permission\Traits
+ * @package AptCD\Permission\Traits
  */
 trait HasPermissions
 {
@@ -113,7 +113,7 @@ trait HasPermissions
      * @param string|array|Permission|\Illuminate\Support\Collection $permissions
      *
      * @return $this
-     * @throws \Maklad\Permission\Exceptions\GuardDoesNotMatch
+     * @throws \AptCD\Permission\Exceptions\GuardDoesNotMatch
      */
     public function revokePermissionTo(...$permissions): self
     {
@@ -351,7 +351,7 @@ trait HasPermissions
      * Scope the model query to certain permissions only.
      *
      * @param Builder                                                                  $query
-     * @param string|array|\Maklad\Permission\Contracts\PermissionInterface|Collection $permissions
+     * @param string|array|\AptCD\Permission\Contracts\PermissionInterface|Collection $permissions
      *
      * @return Builder
      */

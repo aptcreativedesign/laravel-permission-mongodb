@@ -1,17 +1,17 @@
 <?php
 
-namespace Maklad\Permission;
+namespace AptCD\Permission;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
-use Maklad\Permission\Contracts\PermissionInterface as Permission;
-use Maklad\Permission\Contracts\RoleInterface as Role;
-use Maklad\Permission\Directives\PermissionDirectives;
+use AptCD\Permission\Contracts\PermissionInterface as Permission;
+use AptCD\Permission\Contracts\RoleInterface as Role;
+use AptCD\Permission\Directives\PermissionDirectives;
 use Illuminate\Support\Facades\DB;
 
 /**
  * Class PermissionServiceProvider
- * @package Maklad\Permission
+ * @package AptCD\Permission
  */
 class PermissionServiceProvider extends ServiceProvider
 {

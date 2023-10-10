@@ -1,18 +1,18 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 use InvalidArgumentException;
 use Throwable;
 
 /**
- * Class MakladException
- * @package Maklad\Permission\Exceptions
+ * Class AptCDException
+ * @package AptCD\Permission\Exceptions
  */
-class MakladException extends InvalidArgumentException
+class AptCDException extends InvalidArgumentException
 {
     /**
-     * MakladException constructor.
+     * AptCDException constructor.
      *
      * @param string $message
      * @param int $code

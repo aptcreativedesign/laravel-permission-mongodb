@@ -1,18 +1,18 @@
 <?php
 
-namespace Maklad\Permission\Traits;
+namespace AptCD\Permission\Traits;
 
 use Illuminate\Support\Collection;
-use Jenssegers\Mongodb\Eloquent\Builder;
-use Jenssegers\Mongodb\Eloquent\Model;
-use Maklad\Permission\Contracts\RoleInterface as Role;
-use Maklad\Permission\Helpers;
-use Maklad\Permission\PermissionRegistrar;
+use MongoDB\Laravel\Eloquent\Builder;
+use MongoDB\Laravel\Eloquent\Model;
+use AptCD\Permission\Contracts\RoleInterface as Role;
+use AptCD\Permission\Helpers;
+use AptCD\Permission\PermissionRegistrar;
 use ReflectionException;
 
 /**
  * Trait HasRoles
- * @package Maklad\Permission\Traits
+ * @package AptCD\Permission\Traits
  */
 trait HasRoles
 {

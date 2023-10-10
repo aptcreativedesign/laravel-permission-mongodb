@@ -1,12 +1,12 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * Class UnauthorizedException
- * @package Maklad\Permission\Exceptions
+ * @package AptCD\Permission\Exceptions
  */
 class UnauthorizedException extends HttpException
 {

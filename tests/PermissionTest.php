@@ -1,9 +1,9 @@
 <?php
 
-namespace Maklad\Permission\Test;
+namespace AptCD\Permission\Test;
 
-use Maklad\Permission\Exceptions\PermissionAlreadyExists;
-use Maklad\Permission\Models\Permission;
+use AptCD\Permission\Exceptions\PermissionAlreadyExists;
+use AptCD\Permission\Models\Permission;
 use Monolog\Logger;
 
 class PermissionTest extends TestCase

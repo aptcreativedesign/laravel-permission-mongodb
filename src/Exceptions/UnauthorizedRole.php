@@ -1,10 +1,10 @@
 <?php
 
-namespace Maklad\Permission\Exceptions;
+namespace AptCD\Permission\Exceptions;
 
 /**
  * Class UnauthorizedRole
- * @package Maklad\Permission\Exceptions
+ * @package AptCD\Permission\Exceptions
  */
 class UnauthorizedRole extends UnauthorizedException
 {
