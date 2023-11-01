@@ -64,7 +64,8 @@ class Role extends Model implements RoleInterface
             throw new RoleAlreadyExists($helpers->getRoleAlreadyExistsMessage($name, $guardName));
         }
 
-        return $helpers->checkVersion() ? parent::create($attributes) : static::query()->create($attributes);
+        return static::query()->create($attributes);
+//        return $helpers->checkVersion() ? parent::create($attributes) : static::query()->create($attributes);
     }
 
     /**
