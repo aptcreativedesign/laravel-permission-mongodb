@@ -2,7 +2,11 @@
 
 All Notable changes to `laravel-permission-mongodb` will be documented in this file.
 
-## 3.2.1 - 2020-10-04
+## 3.2.2 - 2025-06-10
+### Changed
+ - fixed issue in composer.json
+
+## 3.2.1 - 2025-06-10
 ### Changed
  - Update dependencies to support Laravel 11.x
 
