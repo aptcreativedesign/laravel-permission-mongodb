@@ -2,6 +2,10 @@
 
 All Notable changes to `laravel-permission-mongodb` will be documented in this file.
 
+## 4.0.1 - 2025-06-10
+### Fixed
+- Fixed issue with composer.json found with `composer validate`
+
 ## 4.0.0 - 2025-06-10
 ### LATEST RELEASE
 
