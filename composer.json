@@ -1,5 +1,6 @@
 {
     "name": "aptcreativedesign/laravel-permission-mongodb",
+    "version": "3.2.1",
     "description": "Permission handling for Laravel 10 and up using mongodb",
     "keywords": [
         "laravel",
